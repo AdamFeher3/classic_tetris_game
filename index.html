@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fascinate&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Tetris Game</title>
+</head>
+<body">
+    <main id="main">
+        <div id="menu">
+            <p>
+                <span>T</span>
+                <span>E</span>
+                <span>T</span>
+                <span>R</span>
+                <span>I</span>
+                <span>S</span>
+            </p>
+            <span>game</span>
+            <button type="button" id="start">PLAY</button>
+        </div>
+        <div id="game">
+            <p>
+                <span>T</span>
+                <span>E</span>
+                <span>T</span>
+                <span>R</span>
+                <span>I</span>
+                <span>S</span>
+            </p>
+            <div id="gameArea">
+                <div id="left">
+                    <canvas id="mainCanvas"></canvas>
+                </div>
+                <div id="right">
+                    <div id="next">NEXT</div>
+                    <canvas id="nextCanvas"></canvas>
+                    <div id="level">LEVEL: 0</div>
+                    <div id="line">LINE: 0</div>
+                    <div id="score">SCORE: 0</div>
+                </div>
+                <div id="pause">PAUSE</div>
+                <div id="gameover">
+                    <p>GAME OVER</p>
+                    <button type="button" id="restart">RESTART</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        document.body.onload = () => {
+            document.getElementById("menu").style.display = "grid";
+            game.state = game.MENU;
+        }
+    </script>
+    <script src="./src/game/gameOver.js"></script>
+    <script src="./src/ui/score.js"></script>
+    <script src="./src/util/image.js"></script>
+    <script src="./src/entity/staticBlock.js"></script>
+    <script src="./src/game/game.js"></script>
+    <script src="./src/render/render.js"></script>
+    <script src="./src/entity/blockZ2.js"></script>
+    <script src="./src/entity/blockZ1.js"></script>
+    <script src="./src/entity/blockT.js"></script>
+    <script src="./src/entity/blockI.js"></script>
+    <script src="./src/entity/blockO.js"></script>
+    <script src="./src/entity/blockL.js"></script>
+    <script src="./src/entity/block.js"></script>
+    <script src="./src/game/script.js"></script>
+    <script src="./src/game/gameLoop.js"></script>
+    <script src="./src/main.js"></script>
+    <script src="./src/ui/menu.js"></script>
+    <script src="./src/ui/restart.js"></script>
+    <script src="./src/input/key.js"></script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Fascinate";
+    cursor: default;
+    image-rendering: pixelated;
+    user-select: none;
+    touch-action: none;
+}
+
+body {
+    background-color: rgb(0,100,200);
+    overflow: hidden;
+}
+
+#main {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100dvh;
+    background:
+    linear-gradient(-45deg,
+        transparent,transparent,rgba(200,0,0,0.4),rgba(200,0,0,0.8)
+    ),
+    linear-gradient(45deg,
+        transparent,transparent,rgba(0,200,0,0.4),rgba(0,200,0,0.8)
+    ),
+    linear-gradient(135deg,
+        transparent,transparent,rgba(200,0,200,0.4),rgba(200,0,200,0.8)
+    ),
+    linear-gradient(-135deg,
+        transparent,transparent,rgba(200,200,0,0.4),rgba(200,200,0,0.8)
+    );
+}
+
+#menu,
+#game {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    justify-items: center;
+    align-content: center;
+    display: none;
+}
+
+#menu > p,
+#game > p {
+    color: white;
+    font-size: 12vmin;
+    text-align: center;
+}
+
+#game > p {
+    margin-bottom: -3vmin;
+    margin-top: -10vmin;
+    transform: scale(0.5);
+}
+
+#menu > p span:nth-child(1),
+#game > p span:nth-child(1) { text-shadow: -1vmin 1vmin 1vmin black, 0.6vmin -0.6vmin 0 red; }
+#menu > p span:nth-child(2),
+#game > p span:nth-child(2) { text-shadow: -1vmin 1vmin 1vmin black, 0.6vmin -0.6vmin 0 green; }
+#menu > p span:nth-child(3),
+#game > p span:nth-child(3) { text-shadow: -1vmin 1vmin 1vmin black, 0.6vmin -0.6vmin 0 aqua; }
+#menu > p span:nth-child(4),
+#game > p span:nth-child(4) { text-shadow: -1vmin 1vmin 1vmin black, 0.6vmin -0.6vmin 0 yellow; }
+#menu > p span:nth-child(5),
+#game > p span:nth-child(5) { text-shadow: -1vmin 1vmin 1vmin black, 0.6vmin -0.6vmin 0 orangered; }
+#menu > p span:nth-child(6),
+#game > p span:nth-child(6) { text-shadow: -1vmin 1vmin 1vmin black, 0.6vmin -0.6vmin 0 violet; }
+
+#menu > span {
+    color: white;
+    font-size: 10vmin;
+    text-align: center;
+    text-shadow: 0 0.6vmin 0.8vmin black;
+    transform: translateY(-40%);
+}
+
+#start,
+#restart {
+    color: white;
+    text-shadow: 0 0 2vmin black;
+    padding: 1vmin 3vmin 1vmin 3vmin;
+    border-radius: 10vmin;
+    border: 0.6vmin solid white;
+    background: none;
+    box-shadow:
+    0 1vmin 0 gray,
+    -2vmin 2vmin 4vmin rgba(0,0,0,0.6);
+}
+
+#start {
+    font-size: 5vmin;
+    margin-top: 32vmin;
+}
+
+#restart {
+    font-size: 4vmin;
+    margin-top: 10vmin;
+    letter-spacing: 12%;
+    background-color: rgba(255,255,255,0.4);
+}
+
+#start:hover,
+#restart:hover,
+#start:active,
+#restart:active {
+    cursor: pointer;
+    background: white;
+    color: black;
+    transform: scale(1.1);
+}
+
+#gameArea {
+    position: relative;
+    height: 70vmin;
+    aspect-ratio: 1/1;
+    border: 2vmin solid white;
+    box-shadow: -1vmin 1vmin 4vmin black;
+}
+
+#left,
+#right {
+    position: relative;
+    float: left;
+    height: 100%;
+    justify-items: center;
+    align-items: center;
+    display: grid;
+    background-color: rgba(0,0,0,0.15);
+}
+
+#left { width: 55%; }
+#right { width: 45%; }
+
+#mainCanvas {
+    width: 80%;
+    aspect-ratio: 1/2;
+    border: 1vmin solid white;
+    border-radius: 2vmin;
+    background-color: rgba(0,0,0,0.3);
+}
+
+#next,
+#level,
+#line,
+#score {
+    color: white;
+    font-size: 3.4vmin;
+    text-align: start;
+    text-shadow: 0 0 1.6vmin black;
+    width: 100%;
+}
+
+#next {
+    font-size: 4.4vmin;
+    text-align: center;
+}
+
+#nextCanvas {
+    width: 60%;
+    aspect-ratio: 1/1;
+    border: 1vmin solid white;
+    border-radius: 2vmin;
+    margin-top: -6vmin;
+    background-color: rgba(0,0,0,0.3);
+}
+
+#pause,
+#gameover {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size: 10vmin;
+    text-align: center;
+    text-shadow: 0 0.6vmin 0.8vmin black;
+    background-color: rgba(0,0,0,0.3);
+    box-shadow: inset 0 0 4vmin rgba(0,0,0,0.8);
+    backdrop-filter: blur(4px);
+    justify-items: center;
+    align-content: center;
+    display: none;
+}
+
