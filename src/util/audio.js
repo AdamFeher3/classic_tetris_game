@@ -5,12 +5,13 @@ const clearAudio = new Audio("./src/res/audio/clear.mp3");
 const gameoverAudio = new Audio("./src/res/audio/gameover.mp3");
 const timerAudio = new Audio("./src/res/audio/count.wav");
 const bgMusic = new Audio("./src/res/audio/music.mp3");
+const dropAudio = new Audio("./src/res/audio/drop.mp3");
 
 moveAudio.volume = 0.6;
 rotateAudio.volume = 0.6;
 gameoverAudio.volume = 0.8;
 clearAudio.volume = 0.3;
-bgMusic.volume = 0.1;
+bgMusic.volume = 0.2;
 bgMusic.preservesPitch = true;
 
 for ( const b of btns )
@@ -56,6 +57,14 @@ function timerSound() {
     timerAudio.pause();
     timerAudio.currentTime = 0;
     timerAudio.play();
+}
+
+function dropSound() {
+
+    dropAudio.pause();
+    dropAudio.currentTime = 0;
+    dropAudio.playbackRate = 1.1;
+    dropAudio.play();
 }
 
 function playBackgroundMusic() {

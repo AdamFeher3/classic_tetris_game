@@ -115,5 +115,10 @@ function drop() {
     // DROP BLOCK DOWN
     while ( !collision(0,1) )
         for ( let b of block.pos ) b.y++;
+
+    placeBlock(block);
+    fall = false;
+    dropSound();
+    return;
 }
 
