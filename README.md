@@ -16,9 +16,9 @@
 
 <h2>🛠 Built With</h2>
 <p>
-  <b>• HTML</b> -- page structure<br/>
-  <b>• CSS</b> -- styling and game interface<br/>
-  <b>• JavaScript</b> -- game logic and interactions
+  <b>• HTML</b> — page structure<br/>
+  <b>• CSS</b> — styling and game interface<br/>
+  <b>• JavaScript</b> — game logic and interactions
 </p>
 <h2>📷 Preview</h2>
 <p align="center">
