@@ -21,8 +21,8 @@
 </p>
 <h2>📷 Preview</h2>
 <p align="center">
-  <img width="426" height="240" alt="img4" src="https://github.com/user-attachments/assets/6cd13e5d-1440-4137-9836-0afc86c229e7" />
-  <img width="426" height="240" alt="img1" src="https://github.com/user-attachments/assets/7c973b3d-9a2d-41e5-bd3e-04fa7ce4a0c1" />
-  <img width="426" height="240" alt="img2" src="https://github.com/user-attachments/assets/ad97cd26-f95e-4801-8f4c-a1a366f93ada" />
-  <img width="426" height="240" alt="img3" src="https://github.com/user-attachments/assets/7b70f3c4-3610-4166-a56d-e8880a6a789e" />
+  <img width="320" height="180" alt="img4" src="https://github.com/user-attachments/assets/6cd13e5d-1440-4137-9836-0afc86c229e7" />
+  <img width="320" height="180" alt="img1" src="https://github.com/user-attachments/assets/7c973b3d-9a2d-41e5-bd3e-04fa7ce4a0c1" />
+  <img width="320" height="180" alt="img2" src="https://github.com/user-attachments/assets/ad97cd26-f95e-4801-8f4c-a1a366f93ada" />
+  <img width="320" height="180" alt="img3" src="https://github.com/user-attachments/assets/7b70f3c4-3610-4166-a56d-e8880a6a789e" />
 </p>
