@@ -5,7 +5,8 @@ startBtn.addEventListener("click", async () => {
     // START GAME
     setTimeout(() => {
         gameScreen.style.display = "grid";
-        startGame();
+        setGame();
+        startTimer();
     }, 500);
 });
 

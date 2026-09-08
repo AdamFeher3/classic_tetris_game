@@ -3,6 +3,7 @@ const moveAudio = new Audio("./src/res/audio/move.mp3");
 const rotateAudio = new Audio("./src/res/audio/rotate.mp3");
 const clearAudio = new Audio("./src/res/audio/clear.mp3");
 const gameoverAudio = new Audio("./src/res/audio/gameover.mp3");
+const timerAudio = new Audio("./src/res/audio/count.wav");
 
 moveAudio.volume = 0.6;
 rotateAudio.volume = 0.6;
@@ -45,5 +46,12 @@ function gameOverSound() {
     gameoverAudio.pause();
     gameoverAudio.currentTime = 0;
     gameoverAudio.play();
+}
+
+function timerSound() {
+
+    timerAudio.pause();
+    timerAudio.currentTime = 0;
+    timerAudio.play();
 }
 

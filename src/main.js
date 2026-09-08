@@ -7,6 +7,7 @@ const scoretext = document.getElementById("score");
 const pauseScreen = document.getElementById("pause");
 const gameOverScreen = document.getElementById("gameover");
 const restartBtn = document.getElementById("restart");
+const timerScreen = document.getElementById("timer");
 const btns = [
     startBtn, restartBtn
 ];
@@ -48,10 +49,7 @@ const game = {
     GL: null
 };
 
-/**
- * START GAME
- */
-async function startGame() {
+async function setGame() {
 
     // SET CANVAS SIZE
     canvas.width = game.width * game.size;
@@ -63,19 +61,61 @@ async function startGame() {
     g1.imageSmoothingEnabled = false;
     g2.imageSmoothingEnabled = false;
 
-    setBlock();
-    setTimeout(nextBlock, 100);
-    createStaticArray();
-
     leveltext.textContent = `LEVEL: ${level}`;
 
     // LOAD BLOCK IMAGE
     game.image = await loadImage("./src/res/img/block.png");
+}
+
+/**
+ * START GAME
+ */
+function startGame() {
+
+    setBlock();
+    setTimeout(nextBlock, 100);
+    createStaticArray();
 
     // SET GAME STATE
     game.state = game.PLAY;
 
     // START GAME LOOP
     game.GL = requestAnimationFrame(gameLoop);
+}
+
+/**
+ * START TIMER COUNTDOWN
+ */
+let timeCount = 3;
+let timeInterval = null;
+let gameStarted = false;
+
+function startTimer() {
+
+    timeCount = 3;
+    timerScreen.textContent = `${timeCount}`;
+    timerScreen.style.display = "grid";
+    timerSound();
+    
+    timeInterval = setInterval(() => {
+
+        timeCount--;
+        timerScreen.textContent = `${timeCount}`;
+        if ( timeCount >= 0 )
+            timerSound();
+
+        if ( timeCount < 0 ) {
+
+            clearInterval(timeInterval);
+            timeInterval = null;
+            timerScreen.style.display = "none";
+            if ( gameStarted ) {
+                restartGame();
+                return;
+            }
+            startGame();
+            gameStarted = true;
+        }
+    }, 1000);
 }
 

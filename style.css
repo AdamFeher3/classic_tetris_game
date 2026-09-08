@@ -189,3 +189,18 @@ body {
     display: none;
 }
 
+#timer {
+    position: absolute;
+    width: 80%;
+    aspect-ratio: 1/2;
+    border-radius: 1vmin;
+    background-color: rgba(0,0,0,0.4);
+    color: white;
+    font-size: 14vmin;
+    text-align: center;
+    text-shadow: 0 0.8vmin 1vmin black;
+    justify-items: center;
+    align-content: center;
+    display: grid;
+}
+

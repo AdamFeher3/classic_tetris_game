@@ -23,6 +23,9 @@ function gameOver() {
 
     gameOverSound();
 
+    g1.clearRect(0, 0, canvas.width, canvas.height);
+    g2.clearRect(0, 0, nCanvas.width, nCanvas.height);
+
     gameOverScreen.style.display = "grid";
     game.state = game.GAMEOVER;
     cancelAnimationFrame(game.GL);

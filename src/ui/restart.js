@@ -2,12 +2,11 @@ restartBtn.addEventListener("click", () => {
 
     if ( game.state !== game.GAMEOVER ) return;
 
-    restartGame();
+    gameOverScreen.style.display = "none";
+    setTimeout(startTimer, 100);
 });
 
 function restartGame() {
-
-    console.log("test");
 
     /**
      * RESET LEVEL, LINE AND SCORE
@@ -33,14 +32,11 @@ function restartGame() {
      * RESET GAME SPEED
      */
     game.interval = 1;
-
+    
     /**
      * SET GAME STATE
-     */
-    setTimeout(() => {
-        game.state = game.PLAY;
-        gameOverScreen.style.display = "none";
-    }, 400);
+    */
+    game.state = game.PLAY;
 
     last = null;
     game.GL = requestAnimationFrame(gameLoop);
