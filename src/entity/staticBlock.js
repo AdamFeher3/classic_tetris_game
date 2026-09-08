@@ -69,6 +69,8 @@ function placeBlock(b) {
 
 function clearLine(row) {
 
+    clearSound();
+
     // CLEAR ROWS
     static.splice(row, 1);
     static.unshift(new Array(game.width).fill("x"));

@@ -1,16 +1,16 @@
 /**
  * KEYBOARD CONTROLS
  */
-const includeKeys = [
+const preventKeys = [
     "KeyW","KeyS","KeyA","KeyD","KeyP",
     "ArrowUp","ArrowDown","ArrowLeft","ArrowRight"
 ];
 
-let movedown = false;
+let keyTimer = 2;
 
 document.addEventListener("keydown", (e) => {
 
-    if ( includeKeys.includes(e.code) ) e.preventDefault();
+    if ( preventKeys.includes(e.code) ) e.preventDefault();
     
     const key = e.code;
 
@@ -36,19 +36,18 @@ document.addEventListener("keydown", (e) => {
 
     if ( game.state !== game.PLAY || !fall ) return;
 
-    // CONTROL BLOCK
-    if ( key === "KeyA" || key == "ArrowLeft" ) move(-1);
-    if ( key === "KeyD" || key == "ArrowRight" ) move(1);
-    if ( key === "KeyW" || key == "ArrowUp" ) rotateBlock();
-    if ( key === "KeyS" || key == "ArrowDown" ) {
-        moveDown();
-        movedown = true;
+    keyTimer += 1;
+    if ( keyTimer > 2 ) {
+
+        // CONTROL BLOCK
+        if ( key === "KeyA" || key == "ArrowLeft" ) move(-1);
+        if ( key === "KeyD" || key == "ArrowRight" ) move(1);
+        if ( key === "KeyW" || key == "ArrowUp" ) rotateBlock();
+        if ( key === "KeyS" || key == "ArrowDown" ) moveDown();
+
+        keyTimer = 0;
     }
 });
 
-document.addEventListener("keyup", (e) => {
-
-    if ( e.code === "keyS" || e.code === "ArrowDown" )
-        movedown = false;
-});
+document.addEventListener("keyup", () => keyTimer = 2);
 

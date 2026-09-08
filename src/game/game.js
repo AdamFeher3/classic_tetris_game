@@ -23,7 +23,7 @@ function collision(dx = 0, dy = 0) {
 
 function updateBlock() {
 
-    if ( !fall || movedown ) return;
+    if ( !fall ) return;
 
     // CHECK IF BLOCK CAN FALL
     if ( collision(0,1) ) {
@@ -37,9 +37,13 @@ function updateBlock() {
     for ( let p of block.pos ) p.y++;
 }
 
+let moveTime = 0;
+
 function moveDown() {
 
     if ( !fall ) return;
+
+    moveSound();
 
     // CHECK IF BLOCK CAN FALL
     if ( collision(0,1) ) {
@@ -57,6 +61,8 @@ function move(dx) {
 
     if ( !fall ) return;
 
+    moveSound();
+
     // STOP BLOCK IF HITS SIDES OF CANVAS
     if ( collision(dx,0) ) return;
 
@@ -67,6 +73,8 @@ function move(dx) {
 function rotateBlock() {
 
     if ( !fall || !block.canRotate ) return;
+
+    rotateSound();
 
     const b = block;
 

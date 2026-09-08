@@ -7,6 +7,9 @@ const scoretext = document.getElementById("score");
 const pauseScreen = document.getElementById("pause");
 const gameOverScreen = document.getElementById("gameover");
 const restartBtn = document.getElementById("restart");
+const btns = [
+    startBtn, restartBtn
+];
 
 // MAIN CANVAS
 /** @type {HTMLCanvasElement} */

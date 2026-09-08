@@ -21,6 +21,8 @@ function checkGameOver() {
  */
 function gameOver() {
 
+    gameOverSound();
+
     gameOverScreen.style.display = "grid";
     game.state = game.GAMEOVER;
     cancelAnimationFrame(game.GL);
