@@ -204,3 +204,23 @@ body {
     display: grid;
 }
 
+@media screen and (orientation: portrait) and (max-aspect-ratio: 3 / 4) {
+
+    #menu > p { font-size: 14vmin; }
+    #menu > span { font-size: 12vmin; }
+    #start {
+        font-size: 7vmin;
+        margin-top: 32vmax;
+    }
+    #game > p {
+        margin-bottom: 3vmin;
+        margin-top: -10vmin;
+        transform: scale(0.9);
+    }
+    #gameArea { height: 80vmin; }
+    #next,
+    #level,
+    #line,
+    #score { font-size: 4.8vmin; }
+}
+
