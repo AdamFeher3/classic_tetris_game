@@ -3,7 +3,8 @@
  */
 const preventKeys = [
     "KeyW","KeyS","KeyA","KeyD","KeyP",
-    "ArrowUp","ArrowDown","ArrowLeft","ArrowRight"
+    "ArrowUp","ArrowDown","ArrowLeft","ArrowRight",
+    "Space"
 ];
 
 let keyTimer = 2;
@@ -44,6 +45,7 @@ document.addEventListener("keydown", (e) => {
         if ( key === "KeyD" || key == "ArrowRight" ) move(1);
         if ( key === "KeyW" || key == "ArrowUp" ) rotateBlock();
         if ( key === "KeyS" || key == "ArrowDown" ) moveDown();
+        if ( key === "Space" ) drop();
 
         keyTimer = 0;
     }

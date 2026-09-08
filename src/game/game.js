@@ -108,3 +108,12 @@ function rotateBlock() {
     }
 }
 
+function drop() {
+
+    if ( !fall ) return;
+    
+    // DROP BLOCK DOWN
+    while ( !collision(0,1) )
+        for ( let b of block.pos ) b.y++;
+}
+
