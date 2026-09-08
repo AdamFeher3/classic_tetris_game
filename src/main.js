@@ -109,6 +109,7 @@ function startTimer() {
             clearInterval(timeInterval);
             timeInterval = null;
             timerScreen.style.display = "none";
+            playBackgroundMusic();
             if ( gameStarted ) {
                 restartGame();
                 return;

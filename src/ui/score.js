@@ -20,6 +20,9 @@ function updateStat() {
 
         // INCREASE GAME SPEED
         game.interval = Math.max(0.15, game.interval - 0.075);
+
+        // INCREASE BACKGROUND MUSIC SPEED
+        bgMusic.playbackRate = Math.min(1.5, bgMusic.playbackRate + 0.05);
     }
 
     linetext.textContent = `LINE: ${line}`;

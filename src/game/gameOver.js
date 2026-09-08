@@ -21,6 +21,9 @@ function checkGameOver() {
  */
 function gameOver() {
 
+    bgMusic.pause();
+    bgMusic.currentTime = 0;
+    
     gameOverSound();
 
     g1.clearRect(0, 0, canvas.width, canvas.height);
