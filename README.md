@@ -1,8 +1,9 @@
-<h1><a href="https://adamfeher3.github.io/classic_tetris_game/">Classic Tetris</a></h1>
+<h1>Classic Tetris</h1>
 <p>
   A classic <b>Tetris-style</b> puzzle game<br/>
   <b>Move, rotate</b> and <b>place</b> falling pieces to complete horizontal lines
 </p>
+<a href="https://adamfeher3.github.io/classic_tetris_game/"><b>DEMO</b></a>
 <h2>🎮 Controls</h2>
 
 | Key | Action |
